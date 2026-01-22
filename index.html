@@ -35,7 +35,7 @@
 
 <!-- Main Content -->
 <div class="container py-5">
-  <div style="height: 1200px;"></div>
+  <!-- <div style="height: 1200px;"></div> -->
 
   <!-- Filter Buttons -->
   <div class="mb-4 text-center">
@@ -50,7 +50,7 @@
 
     <div class="col-md-4 project-card fade-in" data-category="web">
       <div class="card shadow-sm h-100">
-        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Web project">
+        <img src="images/tinkercad.jpeg" class="card-img-top" alt="Tinkercad Project Image">
         <div class="card-body">
           <h5 class="card-title">Web Project</h5>
           <p class="card-text">A web-based project.</p>
@@ -67,7 +67,7 @@
 
     <div class="col-md-4 project-card fade-in" data-category="security">
       <div class="card shadow-sm h-100">
-        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Security project">
+        <img src="images/hudu-microsoft.jpg" class="card-img-top" alt="Microsoft Hudu API Project Image">
         <div class="card-body">
           <h5 class="card-title">Security Project</h5>
           <p class="card-text">A security-based project.</p>
@@ -82,43 +82,68 @@
       </div>
     </div>
 
-    <div class="col-md-4 project-card fade-in" data-category="other">
+    <div class="col-md-4 project-card fade-in" data-category="software">
       <div class="card shadow-sm h-100">
-        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Other project">
+        <img src="images/java-contact.png" class="card-img-top" alt="Java Contact Manager Project Image">
         <div class="card-body">
-          <h5 class="card-title">Programming Project</h5>
-          <p class="card-text">A software-based project.</p>
+          <h5 class="card-title">Contact Manager</h5>
+          <p class="card-text">A light-weight contact manager coded in Java.</p>
           <button
               class="btn btn-primary"
               onclick="showModalForProject(
-                'Other Project',
-                'This is a other-based project focused on frontend development.'
+                'Contact Manager',
+                'I wrote this contact manager as a final project for my Java programming course. It allows users to add, edit, delete, and search contacts, storing them in a local file for persistence.'
               )"
             >View Details</button>
         </div>
       </div>
     </div>
 
+    <!-- Template Project Card
+    <div class="col-md-4 project-card fade-in" data-category="other">
+      <div class="card shadow-sm h-100">
+        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Template for Other Project Images">
+        <div class="card-body">
+          <h5 class="card-title">Template Project</h5>
+          <p class="card-text">Use this as a template for other projects to add.</p>
+          <button
+              class="btn btn-primary"
+              onclick="showModalForProject(
+                'Other Project',
+                'This is a placeholder for other projects to add.'
+              )"
+            >View Details</button>
+        </div>
+      </div>
+    </div>
+    -->
+
   </div>
 
   <!-- About Section -->
   <div class="mt-5" id="about">
     <h2>About Me</h2>
-    <p>
-      Short bio goes here. Skills, interests, and focus areas.
-    </p>
+    <p>I am a software engineer and cybersecurity researcher with a strong interest in artificial intelligence and its applications in digital forensics and cybercrime prevention. After completing degrees in software engineering and cybersecurity, I continued my studies at Kent State University, where I am now pursuing a Master of Science in Artificial Intelligence.</p>
+    <p>My work and research focus on ethical hacking, malware analysis, AI-driven security tools, and technologies that help uncover and prevent online exploitation. I enjoy building practical systems that combine machine learning, automation, and security principles to solve real investigative challenges.</p>
+    <p>Outside of academics and engineering, I’ve played piano for over a decade, teach music theory and technique, and enjoy studying languages—Spanish and ASL fluently, with conversational French. During the warmer months, you can usually find me hiking or spending time outdoors.</p>
   </div>
 
   <div class="mt-5" id="contact">
     <h2>Contact Me</h2>
   
-    <form id="contactForm" novalidate>
+    <form
+      id="contactForm"
+      action="https://formspree.io/f/maqqzojv"
+      method="POST"
+      novalidate
+    >
       <div class="mb-3">
         <label for="name" class="form-label">Name</label>
         <input
           type="text"
           class="form-control"
           id="name"
+          name="name"
           required
         >
         <div class="invalid-feedback">
@@ -132,6 +157,7 @@
           type="email"
           class="form-control"
           id="email"
+          name="email"
           required
         >
         <div class="invalid-feedback">
@@ -144,6 +170,7 @@
         <textarea
           class="form-control"
           id="message"
+          name="message"
           rows="4"
           required
         ></textarea>
@@ -157,6 +184,7 @@
       </button>
     </form>
   </div>
+  
   
 
 </div>
