@@ -17,13 +17,17 @@ function filterProjects(category) {
   });
 }
 
-function showModalForProject(title, description) {
+function showModalForProject(title, description, link) {
   document.getElementById('projectModalTitle').textContent = title;
   document.getElementById('projectModalDescription').textContent = description;
+
+  const linkButton = document.getElementById('projectModalLink');
+  linkButton.href = link;
 
   const modal = new bootstrap.Modal(document.getElementById('projectModal'));
   modal.show();
 }
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const backToTopButton = document.getElementById('backToTop');
